@@ -11,22 +11,33 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+
+    <!-- <link rel="stylesheet" href="/stylesheets/main.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+
   </head>
   <body>
-    <div class="wrapper">
+    <header style="display: flex; align-items: center; justify-content: space-between">
+      <p style="font-size: 4rem; margin: 0">RecipeSwap</p>
+      <ul>
+        <li><a href="/users/index">All Users</a></li>
+        <li><a href="/users/show">My Home</a></li>
+        <li><a href="/recipes/index">All Recipes</a></li>
+      </ul>
+    </header>
+    <hr>
+    <main>
 
         <%= yield %>
 
-      <footer class="branding">
-        <small>&copy; 2021 <strong>RecipeSwap</strong></small>
-      </footer>
-    </div>
+    </main>
+    <footer>
+      <p>&copy; 2021 RecipeSwap</p>
+    </footer>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <!--[if lt IE 7]>
-      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-      <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
-    <![endif]-->
   </body>
 </html>
