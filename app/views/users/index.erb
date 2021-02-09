@@ -1,1 +1,14 @@
 <h1>All Users</h1>
+
+<% @users.each do |user| %>
+<h2>
+  <a href="/users/<%= user.id %>">
+    <%= user.username %>
+  </a>
+</h2>
+<ul>
+  <% user.recipes.each do |recipe| %>
+  <li><%= recipe.name %>: <%= recipe.description %></li>
+  <% end %>
+</ul>
+<% end %>
