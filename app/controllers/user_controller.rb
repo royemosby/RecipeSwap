@@ -6,10 +6,9 @@ class UserController < ApplicationController
 
   post '/login' do
     user = User.find_by(:username => params[:username])
-    #binding.pry
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect to '/'
+      redirect to "/users/#{user.id}"
     else
       erb :'users/failure'
     end
@@ -34,9 +33,12 @@ class UserController < ApplicationController
   end
 
   get '/users/:id/edit' do
-    
-    @user = User.find(params[:id])
-    erb :'users/edit'
+    if current_user == User.find(params[:id])
+      @user = current_user
+      erb :'users/edit'
+    else
+      erb :'users/error'
+    end
   end
 
   patch '/users' do
