@@ -1,3 +1,4 @@
+require 'securerandom'
 require './config/environment'
 
 class ApplicationController < Sinatra::Base
@@ -6,6 +7,9 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
+    set :session_secret, "secret"
+    #TODO: reset secret with an ENV variable
+    #see Using Sessions in http://sinatrarb.com/intro.html
   end
 
   get "/" do
@@ -21,7 +25,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def current_user
-      User.find(session[:user_id])
+      User.find_by(:id => session[:user_id])
     end
   end
 
