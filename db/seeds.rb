@@ -1,19 +1,23 @@
 users = [
   {
     username: "badazz-chef",
-    email: "icook@restaraunt.com"
+    email: "icook@restaraunt.com",
+    password: "!QAZ@WSX"
   },
   {
     username: "i_burn_water",
-    email: "cantcook@butgottaeat.org"
+    email: "cantcook@butgottaeat.org",
+    password: "!QAZ@WSX"
   },
   {
     username: "polish-grandma",
-    email: "nanna@paczki.com"
+    email: "nanna@paczki.com",
+    password: "!QAZ@WSX"
   },
   {
     username: "grillz-mcgee",
-    email: "smokedbrisket42@gmail.com"
+    email: "smokedbrisket42@gmail.com",
+    password: "!QAZ@WSX"
   }
 ]
 
