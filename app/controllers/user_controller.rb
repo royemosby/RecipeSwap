@@ -9,6 +9,10 @@ class UserController < ApplicationController
     erb :'users/new'
   end
 
+  get '/users/error' do
+    erb :'users/error'
+  end
+
   get '/users/:id' do
     @user = User.find(params[:id])
     erb :'users/show'
