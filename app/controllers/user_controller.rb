@@ -1,16 +1,31 @@
 class UserController < ApplicationController
 
+  get '/login' do
+    erb :'login'
+  end
+
+  post '/login' do
+    user = User.find_by(:username => params[:username])
+    #binding.pry
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect to '/'
+    else
+      erb :'users/failure'
+    end
+  end
+  
   get '/users' do
     @users = User.all
     erb :'users/index'
   end
+  
+  get '/users/error' do
+    erb :'users/error'
+  end
 
   get '/users/new' do
     erb :'users/new'
-  end
-
-  get '/users/error' do
-    erb :'users/error'
   end
 
   get '/users/:id' do
@@ -19,7 +34,7 @@ class UserController < ApplicationController
   end
 
   get '/users/:id/edit' do
-    #TODO: ensure current user or route to unauthorized
+    
     @user = User.find(params[:id])
     erb :'users/edit'
   end
