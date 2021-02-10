@@ -25,7 +25,12 @@
       <p style="font-size: 4rem; margin: 0"><a href="/">RecipeSwap</a></p>
       <ul>
       <!-- TODO: Make "My Home" vs "Register" conditional based on log in" -->
-        <li><a href="/users">My Home</a></li>
+        <% if !!session[:user_id] %>
+          <li><a href="/users/account">My Account</a></li>
+          <li><a href="/logout">Log Out</a></li>
+        <% else %>
+        <li><a href="/login">Log In</a></li>    
+        <% end %>
         <li><a href="/users">Browse Users</a></li>
         <li><a href="/recipes">Browse Recipes</a></li>
       </ul>
