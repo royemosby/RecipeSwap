@@ -33,6 +33,7 @@ class UserController < ApplicationController
       @user = current_user
       erb :'users/account'
     else
+      flash[:message] = "You must be logged on to view this page."
       redirect to '/users/error'
     end
   end
@@ -55,6 +56,7 @@ class UserController < ApplicationController
       @user = current_user
       erb :'users/edit'
     else
+      flash[:message] = "You are not allowed to edit another user's account info!"
       erb :'users/error'
     end
   end
@@ -79,12 +81,14 @@ class UserController < ApplicationController
 
   post '/users' do
     if !!User.find_by(:username => params[:username])
+      flash[:message] = "Username <em>#{params[:username]}</em> already exists. Please choose another..."
       redirect to '/users/error'      
     end
     if !!params[:username] && !!params[:password]
       user = User.create(:username => params[:username], :password => params[:password], :email => params[:email])
       redirect to "/users/#{user.id}"
     else
+      flash[:message] = "You are missing a username or password. Please try registering again"
       redirect to '/users/error'
     end
   end
