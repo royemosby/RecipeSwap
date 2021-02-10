@@ -61,6 +61,9 @@ class UserController < ApplicationController
   end
 
   post '/users' do
+    if !!User.find_by(:username => params[:username])
+      redirect to '/users/error'      
+    end
     if !!params[:username] && !!params[:password]
       user = User.create(:username => params[:username], :password => params[:password], :email => params[:email])
       redirect to "/users/#{user.id}"
