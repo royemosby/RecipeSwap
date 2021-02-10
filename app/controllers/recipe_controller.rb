@@ -7,6 +7,16 @@ class RecipeController < ApplicationController
     @recipes = Recipe.all
       erb :"recipes/index"
   end
+
+  post '/recipes' do
+    #validate the length of the ingredients and instructions.
+    #send to ?fix? to remedy
+    @recipe = Recipe.new(params)
+    @recipe.user = current_user
+    @recipe.save
+    flash[:message] = "Your recipe has been published!"
+    redirect to "/recipes/#{@recipe.id}"
+  end
   
     get '/recipes/new' do
     if logged_in?
@@ -23,3 +33,4 @@ class RecipeController < ApplicationController
   end
 
 end
+
