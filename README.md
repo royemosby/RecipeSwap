@@ -3,7 +3,7 @@
 ## TODO
 
 - [ ] validate project specifications
-- [ ] complete user views
+- [x] complete user views
 - [ ] complete recipe views
 - [ ] validate user tasks/limitations
 - [ ] flash messaging on create, edit, spinoff, errors
