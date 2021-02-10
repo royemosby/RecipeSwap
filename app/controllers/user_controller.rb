@@ -13,10 +13,24 @@ class UserController < ApplicationController
       erb :'users/failure'
     end
   end
+
+  get '/logout' do
+    session.clear
+    redirect to '/'
+  end
   
   get '/users' do
     @users = User.all
     erb :'users/index'
+  end
+
+  get '/users/account' do
+    if logged_in?
+      @user = current_user
+      erb :'users/account'
+    else
+
+    end
   end
   
   get '/users/error' do
