@@ -1,5 +1,8 @@
+require 'rack-flash'
+
 class RecipeController < ApplicationController
-  
+  use Rack::Flash
+
   get "/recipes" do
     @recipes = Recipe.all
       erb :"recipes/index"
@@ -9,4 +12,5 @@ class RecipeController < ApplicationController
     @recipe = Recipe.find(params[:id])
     erb :"recipes/show"
   end
+
 end
