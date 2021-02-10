@@ -1,6 +1,10 @@
 <h1>My Account</h1>
-<h2><%= @user.username %></h2>
+<p><a href="/users/<%= @user[:id] %>/edit">Edit my account info</a></p>
+<p><a href="/users/<%= @user[:id] %>">Go to my profile page</a></p>
+<h2>Username: <%= @user.username %></h2>
+<h2>Email: <%= @user.email %></h2>
 <ul>
+<h2>My recipes</h2>
 <% @user.recipes.each do |recipe| %>
   <li><%=recipe.name %>: <%=recipe.description %></li>
 <% end %>
