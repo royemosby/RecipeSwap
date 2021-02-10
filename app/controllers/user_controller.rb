@@ -60,6 +60,19 @@ class UserController < ApplicationController
   end
 
   patch '/users' do
+    @user = current_user.authenticate(params[:old_password])
+    if !!@user
+      @user.update(:username => params[:username], :email => params[:email])
+      flash[:message] = "Username/email changes applied."
+      if !!params[:new_password] && params[:new_password].length > 0
+        @user.update(:password => params[:new_password])
+        flash[:message] << " Password has been updated."
+      end
+      redirect to "/users/#{@user.id}"
+    else
+      flash[:message] = "Changes were not saved. You entered the incorrect password."
+      redirect to '/users/error'
+    end
     #TODO: validate against session and params[:old_password]
     #TODO: update user. Include new_password IF NOT empty
   end
