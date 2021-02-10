@@ -16,6 +16,7 @@ class ApplicationController < Sinatra::Base
     if logged_in?
       @user = current_user
     end
+    #binding.pry
     erb :index
   end
 
