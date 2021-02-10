@@ -18,7 +18,7 @@ class RecipeController < ApplicationController
     redirect to "/recipes/#{@recipe.id}"
   end
   
-    get '/recipes/new' do
+  get '/recipes/new' do
     if logged_in?
       erb :'recipes/new'
     else
@@ -27,10 +27,20 @@ class RecipeController < ApplicationController
     end
   end
 
+  
   get "/recipes/:id" do
     @recipe = Recipe.find(params[:id])
     erb :"recipes/show"
   end
-
+  
+  get '/recipes/:id/edit' do
+    @recipe = Recipe.find(params[:id])    
+    if logged_in? && @recipe.user_id == session[:user_id]
+      erb :'recipes/edit'
+    else
+      flash[:message] = "You do not have permission to make changes to this recipe."
+      erb :'recipes/error'
+    end
+  end
 end
 
