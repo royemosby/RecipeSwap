@@ -23,43 +23,44 @@
 ## Validate user tasks/limitations
 
 - [ ] Anonymous users
-  - [X] CAN
-    - [X] view home
-    - [X] view all recipes
-    - [X] view individual recipes
-    - [X] view all users
-    - [X] view individual users
-    - [X] attempt login
+  - [x] CAN
+    - [x] view home
+    - [x] view all recipes
+    - [x] view individual recipes
+    - [x] view all users
+    - [x] view individual users
+    - [x] attempt login
   - [ ] CANNOT
     - [ ] create new recipes
     - [ ] create spinoff recipes
     - [ ] edit any recipes (.../edit redirects to forbidden) (currently /error)
-    - [ ] view user account (.../account redirects to forbidden) (currently /error)
-    - [X] edit any user accounts
-    - [X] log in with nonexistent username
-    - [X] log in with incorrect password
+    - [x] view user account
+    - [x] edit any user accounts
+    - [x] log in with nonexistent username
+    - [x] log in with incorrect password
+    - [x] create account with existing username
   - [ ] Does NOT see
     - [ ] any edit links (verify when all views complete)
     - [ ] create new recipe (verify when all views complete)
-    - [X] logout link
+    - [x] logout link
 
 - [ ] Authenticated users
   - [ ] CAN
-    - [X] view all recipes
-    - [X] view individual recipes
+    - [x] view all recipes
+    - [x] view individual recipes
     - [ ] edit OWN recipes
     - [ ] create recipes
     - [ ] create spinoff recipes
-    - [X] view all users
-    - [X] view individual users
-    - [X] view OWN account (need to complete ERB)
-    - [ ] edit OWN account (edit should maybe be ID-less so anon cannot type in link)
-    - [X] logout
+    - [x] view all users
+    - [x] view individual users
+    - [x] view OWN account (need to complete ERB)
+    - [x] edit OWN account
+    - [x] logout
   - [ ] CANNOT
     - [ ] edit other's recipes
     - [ ] delete other's recipes
-    - [ ] see other's account
-    - [ ] edit other user accounts
+    - [x] see other's account
+    - [x] edit other user accounts
 
 ## Things to think about
 
