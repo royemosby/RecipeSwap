@@ -29,7 +29,7 @@ class UserController < ApplicationController
       @user = current_user
       erb :'users/account'
     else
-
+      redirect to '/users/error'
     end
   end
   
