@@ -22,7 +22,7 @@ class RecipeController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.update(:name => params[:name],
                     :servings => params[:servings],
-                    :description => params[:servings],
+                    :description => params[:description],
                     :ingredients => params[:ingredients],
                     :instructions => params[:instructions])
     flash[:message] = "Your recipe has been updated!"
