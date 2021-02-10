@@ -17,6 +17,17 @@ class RecipeController < ApplicationController
     flash[:message] = "Your recipe has been published!"
     redirect to "/recipes/#{@recipe.id}"
   end
+
+  patch '/recipes/:id' do #this has to be different than user since not referencing session
+    @recipe = Recipe.find(params[:id])
+    @recipe.update(:name => params[:name],
+                    :servings => params[:servings],
+                    :description => params[:servings],
+                    :ingredients => params[:ingredients],
+                    :instructions => params[:instructions])
+    flash[:message] = "Your recipe has been updated!"
+    redirect to "/recipes/#{@recipe.id}"
+  end
   
   get '/recipes/new' do
     if logged_in?
