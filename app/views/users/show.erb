@@ -1,7 +1,32 @@
-<h1>User Dash</h1>
-<h2><%= @user.username %></h2>
-<ul>
-<% @user.recipes.each do |recipe| %>
-  <li><%=recipe.name %>: <%=recipe.description %></li>
+<% if flash.has?(:message) %>
+  <p><%= flash[:message] %></p>
 <% end %>
-</ul>
+
+
+<% if session[:user_id] == @user.id %>
+  <p><a href="/users/account">Go to my account page</a></p>
+  <h1>My Profile: <%= @user.username %></h1>
+  <h2>My Recipes</h2>
+  <ul>
+  <% if @user.recipes.length ==0 %>
+    <li>This user has no recipes yet.</li>
+  <% else %>
+    <% @user.recipes.each do |recipe| %>
+      <li><%=recipe.name %>: <%=recipe.description %></li>
+    <% end %>
+  <% end %>
+  </ul>
+  <h2>Liked Recipes</h2>
+  <p>TODO...</p>
+
+<% else %>
+
+  <h1><%= @user.username %></h1>
+  <h2>Recipes</h2>
+  <ul>
+  <% @user.recipes.each do |recipe| %>
+    <li><%=recipe.name %>: <%=recipe.description %></li>
+  <% end %>
+  </ul>
+
+<% end %>
