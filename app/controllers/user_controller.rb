@@ -1,4 +1,7 @@
+require 'rack-flash'
+
 class UserController < ApplicationController
+  use Rack::Flash
 
   get '/login' do
     erb :'login'
@@ -8,6 +11,7 @@ class UserController < ApplicationController
     user = User.find_by(:username => params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
+      flash[:message] = "You are now logged in as #{user.username}."
       redirect to "/users/#{user.id}"
     else
       erb :'users/failure'
