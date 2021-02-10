@@ -10,8 +10,8 @@
 - [X] Include user accounts with unique login attribute: username is indexed with unique flag set to true and conditional logic in `post /users` looks for existing username before creating new record/object
 - [ ] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying: TODO: Recipe stuff
 - [ ] Ensure that users can't modify content created by other users: Accounts can't be tampered with and private info is not viewable. TODO: Recipe details TBD
-- [ ] Include user input validations: TODO: make errors more meaningful (probably with flash)
-- [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+- [ ] Include user input validations: Forces unique username. Requires password re-entry when updating account info.
+- [X] BONUS - not required - Display validation failures to user with error message: using flash
 - [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 ## Confirm
