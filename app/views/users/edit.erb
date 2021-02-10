@@ -1,6 +1,6 @@
 <h1>Edit account</h1>
 
-<form action="/users/<%= @user.id %>" method="post">
+<form action="/users" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
   <div>
     <label for="username">Username: </label>
@@ -27,7 +27,7 @@
   <div>
     
     <label for="new_password">Change Password (leave blank if not changing): </label>
-    <input type="new_password" name="new_password" id="new_password" required>
+    <input type="new_password" name="new_password" id="new_password" >
     
   </div>
   <div><button type="submit">Confirm Account Changes</button></div>
