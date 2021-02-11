@@ -20,3 +20,6 @@
 <% instructions.each do |i| %>
   <p><%= i %></p>
 <% end %>
+
+<p><a href="<%=@recipe.id %>/favorite?location=/recipes/<%=@recipe.id %>">+favorite this recipe</a></p>
+<p><a href="<%=@recipe.id %>/spinoff">Spinoff a copy of this recipe to make it your own!</a></p>
