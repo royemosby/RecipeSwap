@@ -1,3 +1,7 @@
+<% if flash.has?(:message) %>
+  <p><%= flash[:message] %></p>
+<% end %>
+
 <h1>All Recipes</h1>
 
 <% @recipes.each do |recipe| %>
@@ -5,5 +9,6 @@
     <a href="/recipes/<%=recipe.id %>"><%=recipe.name %>
     </a>
     : <%=recipe.description %>
+    <a href="recipes/<%=recipe.id %>/favorite?location=/recipes">+fav</a>
   </li>
 <% end %>
