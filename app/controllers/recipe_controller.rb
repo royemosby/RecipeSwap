@@ -44,7 +44,7 @@ class RecipeController < ApplicationController
     if logged_in?
       erb :'recipes/new'
     else
-      flash[:message] = "You have to have an accopunt to create a recipe."
+      flash[:message] = "You have to have an account to create a recipe."
       erb :'users/new'
     end
   end
@@ -57,8 +57,11 @@ class RecipeController < ApplicationController
   get '/recipes/:id/favorite' do
     if logged_in?
       @recipe = Recipe.find_by(:id => params[:id])
-      current_user.favorites << @recipe
-      flash[:message] = "You have saved \"#{@recipe.name}\" as a favorite!"
+      flash[:message] = "You have already saved \"#{@recipe.name}\" before."
+      if !current_user.favorites.include?(@recipe)
+        current_user.favorites << @recipe
+        flash[:message] = "You have saved \"#{@recipe.name}\" as a favorite!"
+      end
       redirect to "#{params[:location]}"
     else
       flash[:message] = "You do not have to be logged in to save favorites."
