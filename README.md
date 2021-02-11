@@ -31,9 +31,9 @@
     - [x] view individual users
     - [x] attempt login
   - [ ] CANNOT
-    - [ ] create new recipes
+    - [X] create new recipes
     - [ ] create spinoff recipes
-    - [ ] edit any recipes (.../edit redirects to forbidden) (currently /error)
+    - [x] edit any recipes
     - [x] view user account
     - [x] edit any user accounts
     - [x] log in with nonexistent username
@@ -48,17 +48,17 @@
   - [ ] CAN
     - [x] view all recipes
     - [x] view individual recipes
-    - [ ] edit OWN recipes
-    - [ ] create recipes
+    - [x] edit OWN recipes
+    - [x] create recipes
     - [ ] create spinoff recipes
     - [x] view all users
     - [x] view individual users
     - [x] view OWN account (need to complete ERB)
     - [x] edit OWN account
     - [x] logout
-  - [ ] CANNOT
-    - [ ] edit other's recipes
-    - [ ] delete other's recipes
+  - [x] CANNOT
+    - [x] edit other's recipes
+    - [x] delete other's recipes
     - [x] see other's account
     - [x] edit other user accounts
 
@@ -67,6 +67,4 @@
 - Should recipes be allowed to be deleted?
   - Turn ones that have spinoffs into orphans?
   - Totes delete recipes that have no spinoffs
-- Force unique usernames
-- Recipe formatting- parse by step numbers or respect line breaks from editor
 - Should account actions be top-tier resources instead of nested under user?
