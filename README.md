@@ -1,5 +1,14 @@
 # RecipeSwap
 
+RecipeSwap allows users to browse, curate, and spin off recipes. Pinterest and browser bookmarks are lovely way to curate recipies from online locations but they have one serious drawback. There is no way to tweak that recipe. Whether your an onion lover, vegan, fan of fusion, or just seriously opinionated about flavors, this tool will allow you to tweak the recipes you curate to meet your own personal preferences.
+
+You will be able to:
+
+- Browse all the recipes published
+- Save recipes to your cookbook
+- Spin off saved recipes to make it your own (make an editable coppy, wOOT)
+- Publish you own recipes to share
+
 ## TODO
 
 - [ ] validate project specifications
