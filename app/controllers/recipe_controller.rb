@@ -61,7 +61,7 @@ class RecipeController < ApplicationController
       @recipe = Recipe.find(params[:id])
       erb :"recipes/spinoff"
     else
-      flash[:message] = "You have to have an accopunt to spinoff a recipe."
+      flash[:message] = "You have to have an account to spinoff a recipe."
       erb :'users/new'
     end
   end
