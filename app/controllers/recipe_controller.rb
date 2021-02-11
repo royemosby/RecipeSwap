@@ -57,7 +57,7 @@ class RecipeController < ApplicationController
   get '/recipes/:id/favorite' do
     if logged_in?
       @recipe = Recipe.find_by(:id => params[:id])
-      flash[:message] = "You have already saved \"#{@recipe.name}\" before."
+      flash[:message] = "Must be a good one! You have saved \"#{@recipe.name}\" before."
       if !current_user.favorites.include?(@recipe)
         current_user.favorites << @recipe
         flash[:message] = "You have saved \"#{@recipe.name}\" as a favorite!"
