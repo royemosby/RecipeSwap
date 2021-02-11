@@ -1,1 +1,9 @@
-<h1>Home</h1>
+<h1>Recent Recipes</h1>
+<ul>
+<% @recipes.limit(10).each do |recipe| %>
+  <li><a href="/recipes/<%= recipe.id %>"><h2><%= recipe.name %></h2></a>
+    <p style="margin-left: 1rem">Created by <a href="/users/<%= recipe.user_id %>"><%= recipe.user.username %></a> on <%= recipe.created_at %></p>
+  </li>
+<% end %>
+</ul>
+<h2><a href="/recipes">View more recipes...</a></h2>

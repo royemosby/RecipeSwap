@@ -13,6 +13,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
+    @recipes = Recipe.order(:created_at => :desc).limit(10)
     if logged_in?
       @user = current_user
     end
