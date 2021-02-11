@@ -5,7 +5,12 @@
 <h1>Recent Recipes</h1>
 <ul>
 <% @recipes.limit(10).each do |recipe| %>
-  <li><a href="/recipes/<%= recipe.id %>"><h2><%= recipe.name %></h2></a>
+  <li>
+    <h2>
+      <a href="/recipes/<%= recipe.id %>" style="color:white;"><%= recipe.name %>
+      </a>
+      <a href="recipes/<%=recipe.id %>/favorite?location=/" style="font-size:1rem;">+fav</a>
+    </h2></a>
     <p style="margin-left: 1rem">Created by <a href="/users/<%= recipe.user_id %>"><%= recipe.user.username %></a> on <%= recipe.created_at %></p>
   </li>
 <% end %>
