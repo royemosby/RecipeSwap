@@ -1,6 +1,6 @@
 # RecipeSwap
 
-RecipeSwap allows users to browse, curate, and spin off recipes. Pinterest and browser bookmarks are lovely way to curate recipies from online locations but they have one serious drawback. There is no way to tweak that recipe. Whether your an onion lover, vegan, fan of fusion, or just seriously opinionated about flavors, this tool will allow you to tweak the recipes you curate to meet your own personal preferences.
+RecipeSwap allows users to browse, curate, and spin off recipes. Pinterest and browser bookmarks are lovely way to curate recipes from online locations but they have one serious drawback. There is no way to tweak that recipe. Whether your an onion lover, vegan, fan of fusion, or just seriously opinionated about flavors, this tool will allow you to tweak the recipes you curate to meet your own personal preferences.
 
 You will be able to:
 
@@ -39,9 +39,9 @@ You will be able to:
     - [x] view all users
     - [x] view individual users
     - [x] attempt login
-  - [ ] CANNOT
+  - [x] CANNOT
     - [X] create new recipes
-    - [ ] create spinoff recipes
+    - [x] create spinoff recipes
     - [x] edit any recipes
     - [x] view user account
     - [x] edit any user accounts
@@ -59,12 +59,13 @@ You will be able to:
     - [x] view individual recipes
     - [x] edit OWN recipes
     - [x] create recipes
-    - [ ] create spinoff recipes
+    - [x] create spinoff recipes
     - [x] view all users
     - [x] view individual users
     - [x] view OWN account (need to complete ERB)
     - [x] edit OWN account
     - [x] logout
+    - [ ] collect recipes (favorite)
   - [x] CANNOT
     - [x] edit other's recipes
     - [x] delete other's recipes
@@ -76,4 +77,3 @@ You will be able to:
 - Should recipes be allowed to be deleted?
   - Turn ones that have spinoffs into orphans?
   - Totes delete recipes that have no spinoffs
-- Should account actions be top-tier resources instead of nested under user?
