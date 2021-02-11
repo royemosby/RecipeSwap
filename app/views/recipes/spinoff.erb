@@ -1,0 +1,45 @@
+<h1>Make this recipe your own!</h1>
+
+<form action="/recipes" method="post">
+  <div>
+    <label for="name">Recipe name: </label>
+    <input type="text" 
+            name="name" 
+            id="name"
+            value="<%= @recipe.name %>" 
+            required></div>
+  <div>
+    <label for="servings">Serves: </label>
+    <input type="number" 
+            name="servings" 
+            id="servings" 
+            required min="1" 
+            value="<%= @recipe.servings %>">
+  </div>
+  <div>
+    <label for="description">Description: </label>
+    <input type="text" 
+            name="description" 
+            id="description"
+            value="<%= @recipe.description %>"
+            required>
+  </div>
+  <div>
+    <label for="ingredients">Ingredients: </label>
+    <textarea name="ingredients" 
+              id="ingredients" 
+              rows="15" cols="80" 
+              required><%= @recipe.ingredients %></textarea>
+  </div>
+  <div>
+    <label for="instructions">Instructions: </label>
+    <textarea name="instructions" 
+              id="instructions" 
+              rows="20" cols="80" 
+              required><%= @recipe.instructions %></textarea>
+  </div>
+  <input type="hidden" name="original_id" value="<%= @recipe.id %>">
+  <div>
+      <button type="submit">Spinoff Recipe</button>
+  </div>
+</form>
