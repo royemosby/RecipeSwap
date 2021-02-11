@@ -44,9 +44,8 @@ class RecipeController < ApplicationController
     if logged_in?
       erb :'recipes/new'
     else
-      status 403
-      flash[:message] = "You have to be logged in to create a recipe."
-      erb :'recipes/error'
+      flash[:message] = "You have to have an accopunt to create a recipe."
+      erb :'users/new'
     end
   end
 
