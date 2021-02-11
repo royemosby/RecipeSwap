@@ -23,7 +23,7 @@
   <body>
     <header style="display: flex; align-items: center; justify-content: space-between">
       <p style="font-size: 4rem; margin: 0"><a href="/">RecipeSwap</a></p>
-      <ul>
+      <ul style="list-style:none;">
         <% if !!session[:user_id] %>
           <li><a href="/users/account">My Account</a></li>
           <li><a href="/logout">Log Out</a></li>
@@ -33,6 +33,9 @@
         <% end %>
         <li><a href="/users">Browse Users</a></li>
         <li><a href="/recipes">Browse Recipes</a></li>
+        <% if !!session[:user_id] %>
+        <li><a href="/recipes/new">Create New Recipe</a></li>
+        <% end %>
       </ul>
     </header>
     <hr>
