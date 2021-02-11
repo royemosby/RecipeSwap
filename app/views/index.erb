@@ -1,3 +1,7 @@
+<% if flash.has?(:message) %>
+  <p><%= flash[:message] %></p>
+<% end %>
+
 <h1>Recent Recipes</h1>
 <ul>
 <% @recipes.limit(10).each do |recipe| %>
@@ -7,3 +11,5 @@
 <% end %>
 </ul>
 <h2><a href="/recipes">View more recipes...</a></h2>
+
+
