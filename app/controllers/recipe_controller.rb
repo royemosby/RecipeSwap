@@ -49,10 +49,21 @@ class RecipeController < ApplicationController
     end
   end
 
-
   get "/recipes/:id" do
     @recipe = Recipe.find(params[:id])
     erb :"recipes/show"
+  end
+
+  get '/recipes/:id/favorite' do
+    if logged_in?
+      @recipe = Recipe.find_by(:id => params[:id])
+      current_user.favorites << @recipe
+      flash[:message] = "You have saved \"#{@recipe.name}\" as a favorite!"
+      redirect to "#{params[:location]}"
+    else
+      flash[:message] = "You do not have to be logged in to save favorites."
+      erb :'recipes/error'
+    end
   end
 
   get '/recipes/:id/spinoff' do
