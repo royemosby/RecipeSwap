@@ -56,8 +56,14 @@ class RecipeController < ApplicationController
   end
 
   get '/recipes/:id/spinoff' do
-    @recipe = Recipe.find(params[:id])
-    erb :"recipes/spinoff"
+  
+    if logged_in?
+      @recipe = Recipe.find(params[:id])
+      erb :"recipes/spinoff"
+    else
+      flash[:message] = "You have to have an accopunt to spinoff a recipe."
+      erb :'users/new'
+    end
   end
 
   get '/recipes/:id/edit' do
