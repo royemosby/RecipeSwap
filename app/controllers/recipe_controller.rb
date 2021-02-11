@@ -8,7 +8,7 @@ class RecipeController < ApplicationController
       erb :"recipes/index"
   end
 
-  post '/recipes' do
+  post '/recipes' do #also handles spinoffs
     if logged_in?
       @recipe = Recipe.new(params)
       @recipe.user = current_user
@@ -53,6 +53,11 @@ class RecipeController < ApplicationController
   get "/recipes/:id" do
     @recipe = Recipe.find(params[:id])
     erb :"recipes/show"
+  end
+
+  get '/recipes/:id/spinoff' do
+    @recipe = Recipe.find(params[:id])
+    erb :"recipes/spinoff"
   end
 
   get '/recipes/:id/edit' do
