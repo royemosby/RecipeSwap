@@ -5,6 +5,12 @@
 <h1>Recipe: <%= @recipe.name %></h1>
 <% if !!@user && @recipe.user.id == @user.id %>
   <p><a href="/recipes/<%= @recipe.id %>/edit">edit this recipe</a></p>
+
+  <form action="/recipes/<%= @recipe.id %>" method="post" >
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="hidden" name="location" value="/recipes">
+    <button type="submit" style="background: transparent; padding:0; color: #41adff">delete this recipe</button>
+  </form>
 <% end %>
 
 <h2>By <a href="/users/<%= @recipe.user.id %>"><%= @recipe.user.username %></a></h2>
