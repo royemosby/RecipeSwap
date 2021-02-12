@@ -53,7 +53,7 @@ You will be able to:
     - [x] logout link
     - [x] "Create new Recipe" link
 
-- [ ] Authenticated users
+- [x] Authenticated users
   - [x] CAN
     - [x] view all recipes
     - [x] view individual recipes
@@ -66,10 +66,11 @@ You will be able to:
     - [x] edit OWN account
     - [x] logout
     - [x] collect recipes (favorite)
-    - [ ] delete (or orphan) a recipe
-  - [ ] CANNOT
+    - [x] unfavorite recipe
+    - [x] delete (or orphan) a recipe
+  - [x] CANNOT
     - [x] edit other's recipes
-    - [ ] delete other's recipes
+    - [x] delete other's recipes
     - [x] see other's account
     - [x] edit other user accounts
 
