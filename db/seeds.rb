@@ -33,6 +33,14 @@ recipes = [
   servings: 1,
   author: "i_burn_water"
 },
+{name: "2 turkey sandwiches",
+  description: "post-Thanksgiving classic",
+  ingredients: "4 slices bread\r\n12 oz turkey breast\r\n2 tbsp mayonnaise",
+  instructions: "1. Lay bread out flat.\r\n2. Slather on mayo.\r\n3. Slice turkey in 1/8 inch sheets.\r\n4. put turky on slice bread.\r\n5. Join slices and eat!",
+  servings: 1,
+  author: "roymosby",
+  original: "turkey sandwich"
+},
 {
   name: "biscuits",
   description: "Makes 8-10 tender American biscuits",
@@ -75,9 +83,9 @@ recipes.each do |recipe|
 end
 
 bc = User.find_by(:username => "badazz-chef")
-bc.favorites << Recipe.find(2)
-bc.favorites << Recipe.find(4)
+bc.favorites << Recipe.find(3)
+bc.favorites << Recipe.find(5)
 
 rm = User.find_by(:username => "roymosby")
 rm.favorites << Recipe.find(1)
-rm.favorites << Recipe.find(3)
+rm.favorites << Recipe.find(4)
