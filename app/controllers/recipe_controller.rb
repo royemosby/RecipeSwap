@@ -50,6 +50,7 @@ class RecipeController < ApplicationController
   end
 
   get "/recipes/:id" do
+    @user = current_user
     @recipe = Recipe.find(params[:id])
     erb :"recipes/show"
   end
