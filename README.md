@@ -31,7 +31,7 @@ You will be able to:
 
 ## Validate user tasks/limitations
 
-- [ ] Anonymous users
+- [x] Anonymous users
   - [x] CAN
     - [x] view home
     - [x] view all recipes
@@ -48,13 +48,13 @@ You will be able to:
     - [x] log in with nonexistent username
     - [x] log in with incorrect password
     - [x] create account with existing username
-  - [ ] Does NOT see
-    - [ ] any edit links (verify when all views complete)
-    - [ ] create new recipe (verify when all views complete)
+  - [x] Does NOT see
+	  - [x] "My Profile" link
     - [x] logout link
+    - [x] "Create new Recipe" link
 
 - [ ] Authenticated users
-  - [ ] CAN
+  - [x] CAN
     - [x] view all recipes
     - [x] view individual recipes
     - [x] edit OWN recipes
@@ -65,10 +65,11 @@ You will be able to:
     - [x] view OWN account (need to complete ERB)
     - [x] edit OWN account
     - [x] logout
-    - [ ] collect recipes (favorite)
-  - [x] CANNOT
+    - [x] collect recipes (favorite)
+    - [ ] delete (or orphan) a recipe
+  - [ ] CANNOT
     - [x] edit other's recipes
-    - [x] delete other's recipes
+    - [ ] delete other's recipes
     - [x] see other's account
     - [x] edit other user accounts
 
