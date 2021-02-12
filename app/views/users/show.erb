@@ -12,7 +12,7 @@
     <li>This user has no recipes yet.</li>
   <% else %>
     <% @user.recipes.each do |recipe| %>
-      <li><%=recipe.name %>: <%=recipe.description %></li>
+      <li><a href="/recipes/<%= recipe.id %>"><%=recipe.name %></a>: <%=recipe.description %></li>
     <% end %>
   <% end %>
   </ul>
@@ -20,7 +20,7 @@
   <h2>Liked Recipes</h2>
   <ul>
   <% @user.favorites.each do |favorite| %>
-    <li><%= favorite.name %></li>
+    <li><a href="/recipes/<%= favorite.id %>"><%= favorite.name %></a></li>
   <% end %>
 
 <% else %>
@@ -29,7 +29,7 @@
   <h2>Recipes</h2>
   <ul>
   <% @user.recipes.each do |recipe| %>
-    <li><%=recipe.name %>: <%=recipe.description %></li>
+    <li><a href="/recipes/<%= recipe.id %>"><%=recipe.name %></a>: <%=recipe.description %></li>
   <% end %>
   </ul>
 
