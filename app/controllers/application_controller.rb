@@ -29,6 +29,12 @@ class ApplicationController < Sinatra::Base
     def current_user
       User.find_by(:id => session[:user_id])
     end
+
+    def assign_recipe_to_system(recipe)
+      recipe_swap = User.find_by(:username => "RecipeSwap") || User.create(:username => "RecipeSwap", :password => SecureRandom.alphanumeric) #Do not need pw. Can work directly in DB.
+      recipe.user = recipe_swap
+      recipe.save
+    end
   end
 
 end
