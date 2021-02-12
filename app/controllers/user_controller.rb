@@ -61,6 +61,17 @@ class UserController < ApplicationController
     end
   end
 
+
+  get '/users/:id/delete' do
+    if current_user == User.find(params[:id])
+      @user = current_user
+      erb :'users/delete'
+    else
+      flash[:message] = "You are not allowed to modify another user's account info!"
+      erb :'users/error'
+    end
+  end
+
   patch '/users' do
     @user = current_user.authenticate(params[:old_password])
     if !!@user
