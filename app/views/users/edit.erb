@@ -1,5 +1,7 @@
 <h1>Edit account</h1>
 
+<p><a href="/users/<%= @user[:id] %>/delete">Delete my account</a></p>
+
 <form action="/users" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
   <div>
