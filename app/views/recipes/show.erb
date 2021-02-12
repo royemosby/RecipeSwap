@@ -3,6 +3,7 @@
 <% end %>
 
 <h1>Recipe: <%= @recipe.name %></h1>
+<p>By <a href="/users/<%= @recipe.user.id %>"><%= @recipe.user.username %></a></p>
 <h2>Serves: <%= @recipe.servings %></h2>
 <h3>Description: </h3>
 <p><%= @recipe.description %></p>
