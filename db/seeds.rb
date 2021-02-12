@@ -20,7 +20,7 @@ users = [
     password: "!QAZ@WSX"
   },
     username: "roymosby",
-    email: "smokedbrisket42@gmail.com",
+    email: "roy@recipeswap.com",
     password: "password"
 ]
 
@@ -29,7 +29,7 @@ recipes = [
   {name: "turkey sandwich",
   description: "post-Thanksgiving classic",
   ingredients: "2 slices bread\r\n 6 oz turkey breast\r\n 1 tbsp mayonnaise",
-  instructions: "1. Lay bread out flat. 2. Slather on mayo. 3. Slice turkey in 1/8 inch sheets. 4. put turky on slice bread. 5. Join slices and eat!",
+  instructions: "1. Lay bread out flat. \r\n2. Slather on mayo. \r\n3. Slice turkey in 1/8 inch sheets. \r\n4. put turky on slice bread. \r\n5. Join slices and eat!",
   servings: 1,
   author: "i_burn_water"
 },
