@@ -55,11 +55,20 @@ class RecipeController < ApplicationController
     erb :"recipes/show"
   end
 
+  delete '/favorites/:id' do
+    user = current_user
+    recipe = Recipe.find(params[:id])
+    target_favorite = CollectorFavorite.find_by(:collector => user, :favorite => recipe)
+    target_favorite.destroy
+    flash[:message] = "Recipe has been un-favorited."
+    redirect to "#{params[:location]}"
+  end
+
   delete '/recipes/:id' do
     @user = current_user
     @recipe = Recipe.find(params[:id])
     if @recipe.user == @user
-      # check if there are any spinoffs or if it has been favorited
+      # check if there are no spinoffs or if it has not been favorited
       if Recipe.all.filter { |r| r.original == @recipe }.length == 0 && @recipe.collectors.empty?
         @recipe.delete
         flash[:message] = "Your recipe has been deleted"
@@ -89,6 +98,7 @@ class RecipeController < ApplicationController
     end
   end
 
+
   get '/recipes/:id/spinoff' do
   
     if logged_in?
@@ -111,5 +121,3 @@ class RecipeController < ApplicationController
     end
   end
 end
-
-
