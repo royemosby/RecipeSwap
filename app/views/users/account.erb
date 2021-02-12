@@ -7,6 +7,7 @@
 <ul>
 <h2>My recipes</h2>
 <% @user.recipes.each do |recipe| %>
-  <li><%=recipe.name %>: <%=recipe.description %></li>
+  <li><a href="/recipes/<%= recipe.id %>"><%=recipe.name %></a>: <%=recipe.description %></li>
 <% end %>
 </ul>
+
