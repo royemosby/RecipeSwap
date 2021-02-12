@@ -3,6 +3,9 @@
 <% end %>
 
 <h1>Recipe: <%= @recipe.name %></h1>
+<% if !!@user && @recipe.user.id == @user.id %>
+  <p><a href="/recipes/<%= @recipe.id %>/edit">edit this recipe</a></p>
+<% end %>
 
 <h2>By <a href="/users/<%= @recipe.user.id %>"><%= @recipe.user.username %></a></h2>
 
