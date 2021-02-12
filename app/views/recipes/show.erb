@@ -3,12 +3,17 @@
 <% end %>
 
 <h1>Recipe: <%= @recipe.name %></h1>
-<p>By <a href="/users/<%= @recipe.user.id %>"><%= @recipe.user.username %></a></p>
+
+<h2>By <a href="/users/<%= @recipe.user.id %>"><%= @recipe.user.username %></a></h2>
+
 <h2>Serves: <%= @recipe.servings %></h2>
-<h3>Description: </h3>
+
+<h2>Description</h2>
+
 <p><%= @recipe.description %></p>
 
-<h3>Ingredients</h3>
+<h2>Ingredients</h2>
+
 <ul style="list-style: none; padding-inline-start: 0;">
   <% ingredients = @recipe.ingredients.split("\r\n") %>
   <% ingredients.each do |i| %>
@@ -16,7 +21,8 @@
   <% end %>
 </ul>
 
-<h3>Instructions</h3>
+<h2>Instructions</h2>
+
 <% instructions = @recipe.instructions.split("\r\n") %>
 <% instructions.each do |i| %>
   <p><%= i %></p>
