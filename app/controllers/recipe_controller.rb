@@ -55,6 +55,25 @@ class RecipeController < ApplicationController
     erb :"recipes/show"
   end
 
+  delete '/recipes/:id' do
+    @user = current_user
+    @recipe = Recipe.find(params[:id])
+    if @recipe.user == @user
+      # check if there are any spinoffs or if it has been favorited
+      if Recipe.all.filter { |r| r.original == @recipe }.length == 0 && @recipe.collectors.empty?
+        @recipe.delete
+        flash[:message] = "Your recipe has been deleted"
+      else
+        assign_recipe_to_system(@recipe) #in app controller
+        flash[:message] = "Other people are enjoying this recipe. It has been removed from your account but not deleted. If deletion is absolutely nessisary, please contact <a href=\"mailto=admin@recipeswap.com\">RecipeSwap</a>."
+      end
+      redirect to "#{params[:location]}"
+    else
+      flash[:message] = "You do not have permission to make changes to this recipe."
+      erb :'recipes/error'
+    end
+  end
+
   get '/recipes/:id/favorite' do
     if logged_in?
       @recipe = Recipe.find_by(:id => params[:id])
