@@ -62,7 +62,7 @@ class UserController < ApplicationController
   end
 
   get '/users/:id/confirm-delete' do
-    if current_user.id == params[:id]
+    if current_user == User.find(params[:id])
       current_user.favorites.clear
       current_user.recipes.each do |recipe|
         if recipe.spinoffs.empty?
@@ -70,9 +70,11 @@ class UserController < ApplicationController
         else
           recipe_swap = User.find_by(:username => "RecipeSwap") || User.create(:username => "RecipeSwap", :password => SecureRandom.alphanumeric) #Do not need pw. Can work directly in DB.
           recipe.user = recipe_swap
+          recipe.save
         end
       end
       current_user.delete
+      session.clear
       flash[:message] = "Your account has been deleted. Please contact <a href=\"mailto=admin@recipeswap.com\">RecipeSwap</a> in case you need further information"
       redirect to '/'
     else
