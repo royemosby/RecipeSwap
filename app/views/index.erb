@@ -9,9 +9,9 @@
     <h2>
       <a href="/recipes/<%= recipe.id %>" style="color:white;"><%= recipe.name %>
       </a>
-      <a href="recipes/<%=recipe.id %>/favorite?location=/" style="font-size:1rem;">+fav</a>
+      <a href="recipes/<%=recipe.id %>/favorite?location=/" class="font-size-1-rem">+fav</a>
     </h2></a>
-    <p style="margin-left: 1rem">Created by <a href="/users/<%= recipe.user_id %>"><%= recipe.user.username %></a> on <%= recipe.created_at %></p>
+    <p class="margin-left-1-rem">Created by <a href="/users/<%= recipe.user_id %>"><%= recipe.user.username %></a> on <%= recipe.created_at %></p>
   </li>
 <% end %>
 </ul>

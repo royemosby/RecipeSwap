@@ -16,14 +16,15 @@
     <meta name="keywords" content="keywords,here">
     <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 
-    <!-- <link rel="stylesheet" href="/stylesheets/main.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="stylesheet" href="/stylesheets/overrides.css" />
 
   </head>
   <body>
-    <header style="display: flex; align-items: center; justify-content: space-between">
-      <p style="font-size: 4rem; margin: 0"><a href="/">RecipeSwap</a></p>
-      <ul style="list-style:none;">
+    <header>
+      <p id="title"><a href="/">RecipeSwap</a></p>
+      <nav>
+      <ul id="nav-links">
         <% if !!session[:user_id] %>
           <li><a href="/users/<%= session[:user_id] %>">My Profile</a></li>
           <li><a href="/logout">Log Out</a></li>
@@ -37,8 +38,8 @@
         <li><a href="/recipes/new">Create New Recipe</a></li>
         <% end %>
       </ul>
+      </nav>
     </header>
-    <hr>
     <main>
 
         <%= yield %>

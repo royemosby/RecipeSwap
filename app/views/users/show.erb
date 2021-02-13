@@ -24,14 +24,11 @@
       <a href="/recipes/<%= favorite.id %>">
         <%= favorite.name %>
       </a>
-      <form action="/favorites/<%= favorite.id %>" method="post" style="display:inline-block;">
+      <form action="/favorites/<%= favorite.id %>" method="post" class="inline-block">
         <input id="hidden" type="hidden" name="_method" value="delete">
         <input type="hidden" name="location" value="/users/<%= @user.id %>">
         <input type="hidden" name="target_recipe_id" value="<%= favorite.id %>">
-        <button type="submit" style="color: red;
-                                      border-radius: 50%;
-                                      padding: 14px 19px;
-                                      margin-left: 16px;"
+        <button type="submit" class="delete-button"
                 title="remove favorite">&#10005;</button>
       </form>
     </li>

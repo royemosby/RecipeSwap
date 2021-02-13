@@ -9,7 +9,7 @@
   <form action="/recipes/<%= @recipe.id %>" method="post" >
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="hidden" name="location" value="/recipes">
-    <button type="submit" style="background: transparent; padding:0; color: #41adff">delete this recipe</button>
+    <button type="submit" class="button-as-link">delete this recipe</button>
   </form>
 <% end %>
 
@@ -23,7 +23,7 @@
 
 <h2>Ingredients</h2>
 
-<ul style="list-style: none; padding-inline-start: 0;">
+<ul class="list-style-none padding-inline-start-0">
   <% ingredients = @recipe.ingredients.split("\r\n") %>
   <% ingredients.each do |i| %>
     <li><%= i %></li>
