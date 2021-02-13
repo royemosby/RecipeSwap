@@ -61,3 +61,42 @@ header {
   padding: 14px 19px;
   margin-left: 16px;
 }
+
+#flash-wrapper {
+  position: relative
+}
+
+#flash-message {
+  font-size: 1.2rem;
+  background: #526c8c;
+  position: absolute;
+  border: 5px solid #161f29;
+  padding: .5rem;
+  border-radius: 1rem;
+  right: 0;
+  top: 10px;
+  animation: fadeOutFlash .5s forwards;
+  animation-delay: 5s;
+}
+
+#flash-message p {
+  margin: .5rem;
+  font-weight: bold;
+}
+
+@keyframes fadeOutFlash {
+  0% {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  99% {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
