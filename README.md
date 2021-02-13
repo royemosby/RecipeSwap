@@ -13,14 +13,14 @@ You will be able to:
 
 - [ ] validate project specifications
 - [x] complete user views
-- [ ] complete recipe views
-- [ ] validate user tasks/limitations
-- [ ] flash messaging on create, edit, spinoff, errors
+- [x] complete recipe views
+- [x] validate user tasks/limitations
+- [x] flash messaging on create, edit, spinoff, errors
 - [ ] custom 404.erb
 - [ ] about.erb
 - [ ] README
 - [ ] secure session_secret (see app controller config)
-- [ ] finalize styling
+- [x] finalize styling
 - [ ] favicon
 - [ ] blog post
   - [ ] topic
@@ -73,9 +73,3 @@ You will be able to:
     - [x] delete other's recipes
     - [x] see other's account
     - [x] edit other user accounts
-
-## Things to think about
-
-- Should recipes be allowed to be deleted?
-  - Turn ones that have spinoffs into orphans?
-  - Totes delete recipes that have no spinoffs
