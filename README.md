@@ -1,24 +1,53 @@
 # RecipeSwap
 
+## TOC
+
+- About
+- How to install (on local system)
+- Contributor's guide
+- TODO
+
+## About RecipeSwap
+
 RecipeSwap allows users to browse, curate, and spin off recipes. Pinterest and browser bookmarks are lovely way to curate recipes from online locations but they have one serious drawback. There is no way to tweak that recipe. Whether your an onion lover, vegan, fan of fusion, or just seriously opinionated about flavors, this tool will allow you to tweak the recipes you curate to meet your own personal preferences.
 
-You will be able to:
+With RecipeSwap you are be able to:
 
-- Browse all the recipes published
-- Save recipes to your cookbook
-- Spin off saved recipes to make it your own (make an editable coppy, wOOT)
-- Publish you own recipes to share
+- Browse the communitiy's recipes.
+- Mark recipes as favorites for easy reference.
+- Spin off recipes to make them your own.
+- Publish you own recipes to share with the RecipeSwap community.
+
+RecipeSwap is built with love in Ruby using Sinatra and ActiveRecord.
+
+## How to install (on local system)
+
+1. Download or clone this repo.
+2. Open terminal to the top level directory of this project and type `bundle install`
+3. Type `rake db:migrate` to install the sqlite database (will be found in /db)
+4. Populate database with starter content by typing `rake db:seed`.
+5. Start the shotgun server by typing `shotgun`
+6. Open `localhost:9393` in a new browser window and start interacting with RecipeSwap!
+
+## Contributor's guid
+
+Bottom line: I will be a kind human. Please be the same in return.
+
+Please submit a contribution idea through an issue ticket before working on a pull request. Don't submit a pull request unless it has been discussed through an issue ticket. I happily respond to all contructive inquiries.
+
+As this project evolves, I will update this readme and how contributions are accepted.
 
 ## TODO
 
-- [ ] validate project specifications
+- [x] validate project specifications
 - [x] complete user views
 - [x] complete recipe views
 - [x] validate user tasks/limitations
 - [x] flash messaging on create, edit, spinoff, errors
 - [ ] custom 404.erb
-- [ ] about.erb
-- [ ] README
+- [ ] cleanup unused files
+- [x] about.erb
+- [x] README
 - [ ] secure session_secret (see app controller config)
 - [x] finalize styling
 - [ ] favicon
@@ -30,46 +59,3 @@ You will be able to:
 - [ ] submit project
 
 ## Validate user tasks/limitations
-
-- [x] Anonymous users
-  - [x] CAN
-    - [x] view home
-    - [x] view all recipes
-    - [x] view individual recipes
-    - [x] view all users
-    - [x] view individual users
-    - [x] attempt login
-  - [x] CANNOT
-    - [X] create new recipes
-    - [x] create spinoff recipes
-    - [x] edit any recipes
-    - [x] view user account
-    - [x] edit any user accounts
-    - [x] log in with nonexistent username
-    - [x] log in with incorrect password
-    - [x] create account with existing username
-  - [x] Does NOT see
-	  - [x] "My Profile" link
-    - [x] logout link
-    - [x] "Create new Recipe" link
-
-- [x] Authenticated users
-  - [x] CAN
-    - [x] view all recipes
-    - [x] view individual recipes
-    - [x] edit OWN recipes
-    - [x] create recipes
-    - [x] create spinoff recipes
-    - [x] view all users
-    - [x] view individual users
-    - [x] view OWN account (need to complete ERB)
-    - [x] edit OWN account
-    - [x] logout
-    - [x] collect recipes (favorite)
-    - [x] unfavorite recipe
-    - [x] delete (or orphan) a recipe
-  - [x] CANNOT
-    - [x] edit other's recipes
-    - [x] delete other's recipes
-    - [x] see other's account
-    - [x] edit other user accounts
