@@ -61,7 +61,7 @@ class UserController < ApplicationController
     end
   end
 
-  get '/users/:id/confirm-delete' do # TODO: turn this into delete '/users/:id' do...
+  delete '/users/:id' do
     if current_user == User.find(params[:id])
       current_user.favorites.clear
       current_user.recipes.each do |recipe|
