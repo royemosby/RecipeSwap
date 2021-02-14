@@ -19,6 +19,12 @@
 
 <h2>By <a href="/users/<%= @recipe.user.id %>"><%= @recipe.user.username %></a></h2>
 
+<% if !!@recipe.original %>
+  <h3 class="italic" >Spinoff of 
+    <a href="/recipes/<%= @recipe.original.id %>"><%= @recipe.original.name %></a> by <a href="/users/<%= @recipe.original.user.id %>"><%= @recipe.original.user.username %></a>
+  </h3>
+<% end %>
+
 <h2>Serves: <%= @recipe.servings %></h2>
 
 <h2>Description</h2>
