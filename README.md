@@ -5,6 +5,7 @@
 - About
 - How to install (on local system)
 - Contributor's guide
+- License
 - TODO
 
 ## About RecipeSwap
@@ -37,6 +38,8 @@ Please submit a contribution idea through an issue ticket before working on a pu
 
 As this project evolves, I will update this readme and how contributions are accepted.
 
+## This project uses the [standard MIT license](LICENSE)
+
 ## TODO
 
 - [x] validate project specifications
@@ -50,12 +53,12 @@ As this project evolves, I will update this readme and how contributions are acc
 - [x] README
 - [ ] secure session_secret (see app controller config)
 - [x] finalize styling
-- [ ] favicon
+- [x] favicon
 - [ ] blog post
   - [ ] topic
   - [ ] draft
   - [ ] post
-- [ ] walk-through video
+- [x] walk-through video
 - [ ] submit project
 
 ## Validate user tasks/limitations
