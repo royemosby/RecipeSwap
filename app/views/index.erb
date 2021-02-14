@@ -15,7 +15,7 @@
       </a>
       <a href="recipes/<%=recipe.id %>/favorite?location=/" class="font-size-1-rem">+fav</a>
     </h2></a>
-    <p class="margin-left-1-rem">Created by <a href="/users/<%= recipe.user_id %>"><%= recipe.user.username %></a> on <%= recipe.created_at %></p>
+    <p class="margin-left-1-rem">Created by <a href="/users/<%= recipe.user_id %>"><%= recipe.user.username %></a> on <%= recipe.created_at.strftime("%m/%d/%Y") %></p>
   </li>
 <% end %>
 </ul>
