@@ -49,6 +49,10 @@ header {
   font-size: 1rem;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .button-as-link {
   background: transparent;
   padding: 0;
