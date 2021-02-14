@@ -16,7 +16,9 @@
     <li>This user has no recipes yet.</li>
   <% else %>
     <% @user.recipes.each do |recipe| %>
-      <li><a href="/recipes/<%= recipe.id %>"><%=recipe.name %></a>: <%=recipe.description %></li>
+      <li><a href="/recipes/<%= recipe.id %>"><%=recipe.name %></a>: <%=recipe.description %>
+          <p class="margin-left-1-rem">Posted on <%= recipe.created_at.strftime("%m/%d/%Y") %></p>
+      </li>
     <% end %>
   <% end %>
   </ul>

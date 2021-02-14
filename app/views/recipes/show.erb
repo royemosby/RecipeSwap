@@ -17,7 +17,7 @@
   </form>
 <% end %>
 
-<h2>By <a href="/users/<%= @recipe.user.id %>"><%= @recipe.user.username %></a></h2>
+<h2>By <a href="/users/<%= @recipe.user.id %>"><%= @recipe.user.username %></a> on <%= @recipe.created_at.strftime("%m/%d/%Y") %></h2>
 
 <% if !!@recipe.original %>
   <h3 class="italic" >Spinoff of 
