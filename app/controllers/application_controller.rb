@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, "secret"
+    set :session_secret, "0e1a142ba4f96cc28d285b295cfabd667f699f63ff8"
     #TODO: reset secret with an ENV variable
     #see Using Sessions in http://sinatrarb.com/intro.html
   end
