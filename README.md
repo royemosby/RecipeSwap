@@ -6,7 +6,6 @@
 - How to install (on local system)
 - Contributor's guide
 - License
-- TODO
 
 ## About RecipeSwap
 
@@ -30,7 +29,7 @@ RecipeSwap is built with love in Ruby using Sinatra and ActiveRecord.
 5. Start the shotgun server by typing `shotgun`
 6. Open `localhost:9393` in a new browser window and start interacting with RecipeSwap!
 
-## Contributor's guid
+## Contributor's guide
 
 Bottom line: I will be a kind human. Please be the same in return.
 
@@ -39,26 +38,3 @@ Please submit a contribution idea through an issue ticket before working on a pu
 As this project evolves, I will update this readme and how contributions are accepted.
 
 ## This project uses the [standard MIT license](LICENSE)
-
-## TODO
-
-- [x] validate project specifications
-- [x] complete user views
-- [x] complete recipe views
-- [x] validate user tasks/limitations
-- [x] flash messaging on create, edit, spinoff, errors
-- [ ] custom 404.erb
-- [ ] cleanup unused files
-- [x] about.erb
-- [x] README
-- [ ] secure session_secret (see app controller config)
-- [x] finalize styling
-- [x] favicon
-- [ ] blog post
-  - [ ] topic
-  - [ ] draft
-  - [ ] post
-- [x] walk-through video
-- [ ] submit project
-
-## Validate user tasks/limitations
