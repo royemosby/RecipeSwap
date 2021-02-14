@@ -12,7 +12,7 @@
 - [X] Ensure that users can't modify content created by other users: Accounts can't be tampered with and private info is not viewable. All 'get' routes with forms validate user is at least logged on and shows non-authenticated users an error page with flash message.
 - [X] Include user input validations: Forces unique username. Requires password re-entry when updating account info. Validates users are logged in for post routes and own resources they are attempting to patch.
 - [X] BONUS - not required - Display validation failures to user with error message: using flash
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [X] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code: All items included and MIT license linked.
 
 ## Confirm
 
