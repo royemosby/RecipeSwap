@@ -25,7 +25,7 @@ RecipeSwap is built with love in Ruby using Sinatra and ActiveRecord.
 1. Download or clone this repo.
 2. Open terminal to the top level directory of this project and type `bundle install`
 3. Type `rake db:migrate` to install the sqlite database (will be found in /db)
-4. Populate database with starter content by typing `rake db:seed`.
+4. Populate database with demo content by typing `rake db:seed`.
 5. Start the shotgun server by typing `shotgun`
 6. Open `localhost:9393` in a new browser window and start interacting with RecipeSwap!
 
