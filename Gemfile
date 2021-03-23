@@ -14,12 +14,12 @@ group :development, :test  do
   gem 'shotgun'
   gem 'tux'
   gem 'pry'
+  gem 'sqlite3', '>1.4'
 end
 
 group :production do
   gem 'rspec'
   gem 'capybara'
   gem 'rack-test'
-  gem 'sqlite3', '>1.4'
   gem 'pg'
 end
