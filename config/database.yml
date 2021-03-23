@@ -9,4 +9,5 @@ production:
   pool: 5
   host: <%= ENV['DATABASE_HOST'] %>
   database: <%= ENV['DATABASE_NAME'] %>
+  user: <%= ENV['DATABASE_USER'] %>
   password: <%= ENV['DATABASE_PW'] %>
