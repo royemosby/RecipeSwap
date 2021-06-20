@@ -1,4 +1,4 @@
-class UserEnforceUniqueUsername < ActiveRecord::Migration
+class UserEnforceUniqueUsername < ActiveRecord::Migration[6.1]
   def change
     add_index :users, :username, unique: true 
   end

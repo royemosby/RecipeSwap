@@ -1,15 +1,10 @@
-require 'securerandom'
-require './config/environment'
-
 class ApplicationController < Sinatra::Base
 
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, "secret"
-    #TODO: reset secret with an ENV variable
-    #see Using Sessions in http://sinatrarb.com/intro.html
+    set :session_secret, ENV["SESSION_SECRET"]
   end
 
   get "/" do
@@ -36,5 +31,10 @@ class ApplicationController < Sinatra::Base
       recipe.save
     end
   end
+
+  not_found do
+  status 404
+  erb :not_found
+end
 
 end
