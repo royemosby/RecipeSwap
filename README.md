@@ -13,7 +13,7 @@ RecipeSwap allows users to browse, curate, and spin off recipes. Pinterest and b
 
 With RecipeSwap you are be able to:
 
-- Browse the communitiy's recipes.
+- Browse the community recipes.
 - Mark recipes as favorites for easy reference.
 - Spin off recipes to make them your own.
 - Publish you own recipes to share with the RecipeSwap community.
