@@ -13,7 +13,7 @@ RecipeSwap allows users to browse, curate, and spin off recipes. Pinterest and b
 
 With RecipeSwap you are be able to:
 
-- Browse the communitiy's recipes.
+- Browse the community recipes.
 - Mark recipes as favorites for easy reference.
 - Spin off recipes to make them your own.
 - Publish you own recipes to share with the RecipeSwap community.
@@ -33,7 +33,7 @@ RecipeSwap is built with love in Ruby using Sinatra and ActiveRecord.
 
 Bottom line: I will be a kind human. Please be the same in return.
 
-Please submit a contribution idea through an issue ticket before working on a pull request. Don't submit a pull request unless it has been discussed through an issue ticket. I happily respond to all contructive inquiries.
+Please submit a contribution idea through an issue ticket before working on a pull request. Don't submit a pull request unless it has been discussed through an issue ticket. I happily respond to all constructive inquiries.
 
 As this project evolves, I will update this readme and how contributions are accepted.
 
